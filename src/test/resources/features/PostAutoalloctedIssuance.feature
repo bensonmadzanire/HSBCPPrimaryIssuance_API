@@ -9,9 +9,9 @@ Feature: Issuance creation
     Given "SUPER_ADMIN" user send a request to endpoint with "/event-login-auth" status code as "200"
     Given the following details
       | DatasourceId          | DB            |
-      | IssuanceDataKey       | DB:ZXZXTEST44 |
-      | IssuerTicker          | ZXZXZXZTEST44 |
-      | IssuerName            | ZXZXZXZTEST44 |
+      | IssuanceDataKey       | DB:ZXZXTEST46 |
+      | IssuerTicker          | ZXZXZXZTEST46 |
+      | IssuerName            | ZXZXZXZTEST46 |
       | MaturityDate          | 1636675200000 |
       | CurrencyCode          | USD           |
       | IssuerCountry         | USA           |
@@ -32,10 +32,10 @@ Feature: Issuance creation
   Scenario:Creating a new Perpetual issuance data
     Given "SUPER_ADMIN" user send a request to endpoint with "/event-login-auth" status code as "200"
     Given the following details for perpetual issuance
-      | DatasourceId          | BBG           |
-      | IssuanceDataKey       | DB:ZXZXTEST39 |
-      | IssuerTicker          | ZXZXZXZTEST39 |
-      | IssuerName            | ZXZXZXZTEST39 |
+      | DatasourceId          | IPR           |
+      | IssuanceDataKey       | IPR:ZXZXTEST40|
+      | IssuerTicker          | ZXZXZXZTEST40 |
+      | IssuerName            | ZXZXZXZTEST40 |
       | CurrencyCode          | USD           |
       | IssuerCountry         | USA           |
       | TrancheCurrency       | USD           |
@@ -55,9 +55,9 @@ Feature: Issuance creation
     Given "SUPER_ADMIN" user send a request to endpoint with "/event-login-auth" status code as "200"
     Given the following details
       | DatasourceId          | DB            |
-      | IssuanceDataKey       | DB:ZXZXTEST44 |
-      | IssuerTicker          | ZXZXZXZTEST44 |
-      | IssuerName            | ZXZXZXZTEST44 |
+      | IssuanceDataKey       | DB:ZXZXTEST45 |
+      | IssuerTicker          | ZXZXZXZTEST45 |
+      | IssuerName            | ZXZXZXZTEST45 |
       | MaturityDate          | 1636675200000 |
       | CurrencyCode          | USD           |
       | IssuerCountry         | USA           |
