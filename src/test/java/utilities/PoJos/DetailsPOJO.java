@@ -16,3 +16,4 @@ public class DetailsPOJO {
     private String serviceName;
 
 }
+

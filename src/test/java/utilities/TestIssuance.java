@@ -1,17 +1,26 @@
 package utilities;
 
 
+
+import com.github.javafaker.Faker;
 import io.restassured.specification.RequestSpecification;
 import utilities.PoJos.Details;
 import utilities.PoJos.DetailsPOJO;
 
-import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 import static utilities.ReqNResSpec.getReqSpec;
 
 public class TestIssuance {
     public static void main(String[] args) {
-        baseURI = "http://" + ConfigReader.readProperty("hsbcIssuance") + ":9064";
+
+        /*Faker fake = new Faker();
+        System.out.println("First Name "+fake.name().firstName());
+        System.out.println("Last Name "+fake.name().lastName());
+        System.out.println("Full Name "+fake.name().fullName());
+        System.out.println("Phone "+fake.phoneNumber().cellPhone());
+        System.out.println("Email  "+fake.internet().emailAddress());
+*/
+        String baseURI = "http://" + ConfigReader.readProperty("hsbcIssuance") + ":9064";
         DetailsPOJO detailsPOJO = new DetailsPOJO();
         detailsPOJO.setMessageType("EVENT_NEW_ISSUANCE_DATA");
         detailsPOJO.setServiceName("ISSUANCE_EVENT_HANDLER");
@@ -45,5 +54,9 @@ public class TestIssuance {
                 then()
                 .spec(ReqNResSpec.getRespSpec())
         ;
+
+
+
+
     }
 }

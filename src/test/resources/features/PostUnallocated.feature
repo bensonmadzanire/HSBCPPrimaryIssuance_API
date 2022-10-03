@@ -5,7 +5,7 @@ Feature: Issuance creation
     Given "SUPER_ADMIN" user send a request to endpoint with "/event-login-auth" status code as "200"
     Given that following details are available
       | DatasourceId          | DB             |
-      | IssuanceDataKey       | DB:ZXZXTEST36 |
+      | IssuanceDataKey       | DB:ZXZXTEST36  |
       | IssuerTicker          | ZXZXZXZTEST36  |
       | IssuerName            | ZXZXZXZTEST36  |
       | CurrencyCode          | USD            |

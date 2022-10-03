@@ -1,11 +1,15 @@
 package utilities.PoJos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.github.javafaker.Faker;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
 public class Details {
+    /*Faker faker = new Faker();
+    String randomName = faker.name().firstName();
+    String prefix;*/
     @JsonProperty("USER_NAME")
     private String USER_NAME;
     @JsonProperty("PASSWORD")
@@ -51,6 +55,7 @@ public class Details {
     public Details() {
     }
 
+
     public Details(String datasourceId, String issuanceDataKey, String issuerTicker, String issuerName, Long maturityDate, String currencyCode, String issuerCountry, String trancheCurrency, String issuerRating, String ipts, String dealStatus, String bookStatus, String bondSeniority, String trancheSettlementDate, String firstCallDate, String totalIssuedAmount, Boolean isPerpetual) {
         super();
         this.datasourceId = datasourceId;
@@ -74,7 +79,7 @@ public class Details {
 
     @JsonProperty("DATASOURCE_ID")
     public String getDatasourceId() {
-        return datasourceId;
+             return datasourceId;
     }
 
     @JsonProperty("DATASOURCE_ID")
@@ -240,5 +245,30 @@ public class Details {
     @JsonProperty("IS_PERPETUAL")
     public void setIsPerpetual(Boolean isPerpetual) {
         this.isPerpetual = isPerpetual;
+    }
+
+    @Override
+    public String toString() {
+        return "Details{" +
+                "USER_NAME='" + USER_NAME + '\'' +
+                ", PASSWORD='" + PASSWORD + '\'' +
+                ", datasourceId='" + datasourceId + '\'' +
+                ", issuanceDataKey='" + issuanceDataKey + '\'' +
+                ", issuerTicker='" + issuerTicker + '\'' +
+                ", issuerName='" + issuerName + '\'' +
+                ", maturityDate=" + maturityDate +
+                ", currencyCode='" + currencyCode + '\'' +
+                ", issuerCountry='" + issuerCountry + '\'' +
+                ", trancheCurrency='" + trancheCurrency + '\'' +
+                ", issuerRating='" + issuerRating + '\'' +
+                ", ipts='" + ipts + '\'' +
+                ", dealStatus='" + dealStatus + '\'' +
+                ", bookStatus='" + bookStatus + '\'' +
+                ", bondSeniority='" + bondSeniority + '\'' +
+                ", trancheSettlementDate='" + trancheSettlementDate + '\'' +
+                ", firstCallDate='" + firstCallDate + '\'' +
+                ", totalIssuedAmount='" + totalIssuedAmount + '\'' +
+                ", isPerpetual=" + isPerpetual +
+                '}';
     }
 }
