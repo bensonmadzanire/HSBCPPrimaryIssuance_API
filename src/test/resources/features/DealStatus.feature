@@ -50,11 +50,8 @@ Feature: Deal status
   @Allocated
   Scenario:Deal statuses and book statuses
     Given "SUPER_ADMIN" user send a request to endpoint with "/event-login-auth" status code as "200"
-    Given the following details
-      | DatasourceId          | IPR            |
-      | IssuanceDataKey       | IPR:ZXZXTEST40 |
-      | IssuerTicker          | ZXZXZXZTEST40  |
-      | IssuerName            | ZXZXZXZTEST40  |
+    Given that the following allocated details
+      | DatasourceId          | DB            |
       | MaturityDate          | 1636675200000  |
       | CurrencyCode          | USD            |
       | IssuerCountry         | USA            |
@@ -64,7 +61,6 @@ Feature: Deal status
       | DealStatus            | Allocated      |
       | BookStatus            | Book open      |
       | BondSeniority         | B.Secured      |
-      | TotalIssuedAmount     | 1000000        |
       | TrancheSettlementDate | 1653649569000  |
       | FirstCallDate         | 1809169569000  |
       | IsPerpetual           | true           |
