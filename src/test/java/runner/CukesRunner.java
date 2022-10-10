@@ -5,13 +5,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {
-                "pretty", "json:target/allure.json",
-                "html:target/cucumber-report.html",
-                "rerun:target/rerun.txt"
-        },
+        plugin = {"pretty", "json:target/cucumber.json","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
         features = "src/test/resources/features",
         glue = "step_definitions",
+        monochrome = true,
         dryRun = false,
         tags = "@Autoallocated"
 )
