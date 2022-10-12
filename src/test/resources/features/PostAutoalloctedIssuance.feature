@@ -48,7 +48,7 @@ Feature: Issuance creation
   @DealSizeTest
   Scenario:Testing the full data feed
     Given "SUPER_ADMIN" user send a request to endpoint with "/event-login-auth" status code as "200"
-    Given the following details
+    Given the following dealsize details
       | DatasourceId          | BBG            |
       | MaturityDate          | 1636675200000 |
       | CurrencyCode          | EUR           |

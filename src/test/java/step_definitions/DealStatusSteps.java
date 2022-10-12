@@ -21,7 +21,6 @@ public class DealStatusSteps {
         details.setIssuanceDataKey(prefix +":"+ fake.currency().code());
         details.setIssuerTicker(fake.name().lastName().toUpperCase());
         details.setIssuerName(fake.country().currencyCode());
-        details.setMaturityDate(Long.valueOf(dataTable.get("MaturityDate")));
         details.setCurrencyCode(dataTable.get("CurrencyCode"));
         details.setIssuerCountry(dataTable.get("IssuerCountry"));
         details.setTrancheCurrency(dataTable.get("TrancheCurrency"));
@@ -36,5 +35,52 @@ public class DealStatusSteps {
         details.setIsPerpetual(Boolean.valueOf(dataTable.get("IsPerpetual")));
         detailsPOJO.setDETAILS(details);
 
+    }
+
+    @Given("the following Announced deal status details")
+    public void theFollowingAnnouncedDealStatusDetails(Map<String,String> dataTable) {
+        detailsPOJO.setMessageType("EVENT_NEW_ISSUANCE_DATA");
+        detailsPOJO.setServiceName("ISSUANCE_EVENT_HANDLER");
+        details.setDatasourceId(dataTable.get("DatasourceId"));
+        details.setIssuanceDataKey(prefix +":"+ fake.currency().code());
+        details.setIssuerTicker(fake.name().lastName().toUpperCase());
+        details.setIssuerName(fake.country().currencyCode());
+        details.setCurrencyCode(dataTable.get("CurrencyCode"));
+        details.setIssuerCountry(dataTable.get("IssuerCountry"));
+        details.setTrancheCurrency(dataTable.get("TrancheCurrency"));
+        details.setIssuerRating(dataTable.get("IssuerRating"));
+        details.setIpts(dataTable.get("Ipts"));
+        details.setDealStatus(dataTable.get("DealStatus"));
+        details.setBookStatus(dataTable.get("BookStatus"));
+        details.setBondSeniority(dataTable.get("BondSeniority"));
+        //details.setTotalIssuedAmount(dataTable.get("TotalIssuedAmount"));
+        details.setTrancheSettlementDate(dataTable.get("TrancheSettlementDate"));
+        details.setFirstCallDate(dataTable.get("FirstCallDate"));
+        details.setIsPerpetual(Boolean.valueOf(dataTable.get("IsPerpetual")));
+        detailsPOJO.setDETAILS(details);
+
+    }
+
+    @Given("the following Final terms deal status details")
+    public void theFollowingFinalTermsDealStatusDetails(Map<String,String> dataTable) {
+        detailsPOJO.setMessageType("EVENT_NEW_ISSUANCE_DATA");
+        detailsPOJO.setServiceName("ISSUANCE_EVENT_HANDLER");
+        //details.setDatasourceId(dataTable.get("DatasourceId"));
+        //details.setIssuanceDataKey(prefix +":"+ fake.currency().code());
+        //details.setIssuerTicker(fake.name().lastName().toUpperCase());
+        //details.setIssuerName(fake.country().currencyCode());
+        //details.setCurrencyCode(dataTable.get("CurrencyCode"));
+        //details.setIssuerCountry(dataTable.get("IssuerCountry"));
+        details.setTrancheCurrency(dataTable.get("TrancheCurrency"));
+        details.setIssuerRating(dataTable.get("IssuerRating"));
+        details.setIpts(dataTable.get("Ipts"));
+        details.setDealStatus(dataTable.get("DealStatus"));
+        details.setBookStatus(dataTable.get("BookStatus"));
+        details.setBondSeniority(dataTable.get("BondSeniority"));
+        //details.setTotalIssuedAmount(dataTable.get("TotalIssuedAmount"));
+        details.setTrancheSettlementDate(dataTable.get("TrancheSettlementDate"));
+        details.setFirstCallDate(dataTable.get("FirstCallDate"));
+        details.setIsPerpetual(Boolean.valueOf(dataTable.get("IsPerpetual")));
+        detailsPOJO.setDETAILS(details);
     }
 }

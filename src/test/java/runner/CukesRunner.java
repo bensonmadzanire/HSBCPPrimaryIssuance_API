@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "step_definitions",
         monochrome = true,
-        dryRun = false,
-        tags = "@Autoallocated"
+        dryRun = false
+        //tags = "@Announced"
 )
 public class CukesRunner {
 

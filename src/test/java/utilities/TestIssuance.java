@@ -13,13 +13,7 @@ import static utilities.ReqNResSpec.getReqSpec;
 public class TestIssuance {
     public static void main(String[] args) {
 
-        /*Faker fake = new Faker();
-        System.out.println("First Name "+fake.name().firstName());
-        System.out.println("Last Name "+fake.name().lastName());
-        System.out.println("Full Name "+fake.name().fullName());
-        System.out.println("Phone "+fake.phoneNumber().cellPhone());
-        System.out.println("Email  "+fake.internet().emailAddress());
-*/
+
         String baseURI = "http://" + ConfigReader.readProperty("hsbcIssuance") + ":9064";
         DetailsPOJO detailsPOJO = new DetailsPOJO();
         detailsPOJO.setMessageType("EVENT_NEW_ISSUANCE_DATA");
