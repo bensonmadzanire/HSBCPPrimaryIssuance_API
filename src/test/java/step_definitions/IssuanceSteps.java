@@ -74,6 +74,7 @@ public class IssuanceSteps {
 
     @Given("that following details are available")
     public void thatFollowingDetailsAreAvailable(Map<String, String> dataTable) {
+        System.out.println("datatable"+dataTable);
         detailsPOJO.setMessageType("EVENT_NEW_ISSUANCE_DATA");
         detailsPOJO.setServiceName("ISSUANCE_EVENT_HANDLER");
         details.setDatasourceId(dataTable.get("DatasourceId"));
